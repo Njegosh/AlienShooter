@@ -23,6 +23,8 @@ public class PlayerBehaviour : MonoBehaviour
 
     float x, y;
     float bt = 0;
+
+    bool shotLR;
     // Update is called once per frame
     void Update()
     {
@@ -50,8 +52,13 @@ public class PlayerBehaviour : MonoBehaviour
 
         else if (Input.GetKey(KeyCode.Space))
         {
-            Instantiate(bullet, topL.position, Quaternion.identity);
-            Instantiate(bullet, topR.position, Quaternion.identity);
+            if(shotLR)
+                Instantiate(bullet, topL.position, Quaternion.identity);
+            else
+                Instantiate(bullet, topR.position, Quaternion.identity);
+            
+            shotLR = !shotLR;
+
             bt=0;
         }
 
