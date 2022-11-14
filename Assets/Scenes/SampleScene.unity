@@ -133,6 +133,7 @@ GameObject:
   m_Component:
   - component: {fileID: 68197829}
   - component: {fileID: 68197828}
+  - component: {fileID: 68197830}
   m_Layer: 0
   m_Name: bugalu (3)
   m_TagString: Untagged
@@ -200,13 +201,32 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 68197827}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.45, y: 3.56, z: 0}
+  m_LocalPosition: {x: 2.45, y: 3.53, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &68197830
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 68197827}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a7a5e43bbd4cc0d8092829e37dfe6a11, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHp: 100
+  hp: 100
+  moveOffset: 0
+  time: 1
+  amp: 1
+  t: 0
+  deathTime: 10
 --- !u!1 &111998563
 GameObject:
   m_ObjectHideFlags: 0
@@ -315,6 +335,7 @@ GameObject:
   m_Component:
   - component: {fileID: 118808864}
   - component: {fileID: 118808863}
+  - component: {fileID: 118808865}
   m_Layer: 0
   m_Name: bugalu (7)
   m_TagString: Untagged
@@ -389,6 +410,25 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &118808865
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 118808862}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a7a5e43bbd4cc0d8092829e37dfe6a11, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHp: 100
+  hp: 100
+  moveOffset: 4
+  time: 1
+  amp: 1
+  t: 0
+  deathTime: 10
 --- !u!1 &316876236
 GameObject:
   m_ObjectHideFlags: 0
@@ -399,6 +439,7 @@ GameObject:
   m_Component:
   - component: {fileID: 316876238}
   - component: {fileID: 316876237}
+  - component: {fileID: 316876239}
   m_Layer: 0
   m_Name: bugalu (9)
   m_TagString: Untagged
@@ -473,6 +514,25 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &316876239
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 316876236}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a7a5e43bbd4cc0d8092829e37dfe6a11, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHp: 100
+  hp: 100
+  moveOffset: 3
+  time: 1
+  amp: 1
+  t: 0
+  deathTime: 10
 --- !u!1 &466920743
 GameObject:
   m_ObjectHideFlags: 0
@@ -483,6 +543,7 @@ GameObject:
   m_Component:
   - component: {fileID: 466920745}
   - component: {fileID: 466920744}
+  - component: {fileID: 466920746}
   m_Layer: 0
   m_Name: bugalu (8)
   m_TagString: Untagged
@@ -557,6 +618,25 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &466920746
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 466920743}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a7a5e43bbd4cc0d8092829e37dfe6a11, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHp: 100
+  hp: 100
+  moveOffset: 3
+  time: 1
+  amp: 1
+  t: 0
+  deathTime: 10
 --- !u!1 &508770651
 GameObject:
   m_ObjectHideFlags: 0
@@ -782,6 +862,7 @@ GameObject:
   m_Component:
   - component: {fileID: 532748432}
   - component: {fileID: 532748431}
+  - component: {fileID: 532748433}
   m_Layer: 0
   m_Name: bugalu (1)
   m_TagString: Untagged
@@ -856,6 +937,25 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &532748433
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 532748430}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a7a5e43bbd4cc0d8092829e37dfe6a11, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHp: 100
+  hp: 100
+  moveOffset: 1
+  time: 1
+  amp: 1
+  t: 0
+  deathTime: 10
 --- !u!1 &543905614
 GameObject:
   m_ObjectHideFlags: 0
@@ -866,6 +966,7 @@ GameObject:
   m_Component:
   - component: {fileID: 543905616}
   - component: {fileID: 543905615}
+  - component: {fileID: 543905617}
   m_Layer: 0
   m_Name: bugalu (4)
   m_TagString: Untagged
@@ -933,13 +1034,32 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 543905614}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.64, y: 3.6299999, z: 0}
+  m_LocalPosition: {x: -2.64, y: 3.53, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &543905617
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 543905614}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a7a5e43bbd4cc0d8092829e37dfe6a11, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHp: 100
+  hp: 100
+  moveOffset: 0
+  time: 1
+  amp: 1
+  t: 0
+  deathTime: 10
 --- !u!1 &826888957
 GameObject:
   m_ObjectHideFlags: 0
@@ -1012,6 +1132,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1047706977}
   - component: {fileID: 1047706976}
+  - component: {fileID: 1047706978}
   m_Layer: 0
   m_Name: bugalu (2)
   m_TagString: Untagged
@@ -1079,13 +1200,32 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1047706975}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.94, y: 4.71, z: 0}
+  m_LocalPosition: {x: 1.26, y: 4.71, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1047706978
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1047706975}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a7a5e43bbd4cc0d8092829e37dfe6a11, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHp: 100
+  hp: 100
+  moveOffset: 1
+  time: 1
+  amp: 1
+  t: 0
+  deathTime: 10
 --- !u!1 &1060401896
 GameObject:
   m_ObjectHideFlags: 0
@@ -1097,6 +1237,7 @@ GameObject:
   - component: {fileID: 1060401899}
   - component: {fileID: 1060401898}
   - component: {fileID: 1060401897}
+  - component: {fileID: 1060401900}
   m_Layer: 0
   m_Name: ship
   m_TagString: Untagged
@@ -1192,6 +1333,102 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!82 &1060401900
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1060401896}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: d5d4f96316fd1a7f8857d60dbada28f5, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &1669557036
 GameObject:
   m_ObjectHideFlags: 0
@@ -1202,6 +1439,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1669557038}
   - component: {fileID: 1669557037}
+  - component: {fileID: 1669557039}
   m_Layer: 0
   m_Name: bugalu (6)
   m_TagString: Untagged
@@ -1276,6 +1514,25 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1669557039
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1669557036}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a7a5e43bbd4cc0d8092829e37dfe6a11, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHp: 100
+  hp: 100
+  moveOffset: 4
+  time: 1
+  amp: 1
+  t: 0
+  deathTime: 10
 --- !u!1 &1709894943
 GameObject:
   m_ObjectHideFlags: 0
@@ -1286,6 +1543,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1709894945}
   - component: {fileID: 1709894944}
+  - component: {fileID: 1709894946}
   m_Layer: 0
   m_Name: bugalu
   m_TagString: Untagged
@@ -1353,13 +1611,32 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1709894943}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.01, y: 3.6399999, z: 0}
+  m_LocalPosition: {x: -0.01, y: 3.53, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1709894946
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1709894943}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a7a5e43bbd4cc0d8092829e37dfe6a11, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHp: 100
+  hp: 100
+  moveOffset: 0
+  time: 1
+  amp: 1
+  t: 0
+  deathTime: 10
 --- !u!1 &1749417941
 GameObject:
   m_ObjectHideFlags: 0
@@ -1370,6 +1647,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1749417943}
   - component: {fileID: 1749417942}
+  - component: {fileID: 1749417944}
   m_Layer: 0
   m_Name: bugalu (5)
   m_TagString: Untagged
@@ -1444,3 +1722,22 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1749417944
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1749417941}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a7a5e43bbd4cc0d8092829e37dfe6a11, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHp: 100
+  hp: 100
+  moveOffset: 3
+  time: 1
+  amp: 1
+  t: 0
+  deathTime: 10

@@ -4,10 +4,11 @@ using UnityEngine;
 
 public class PlayerBehaviour : MonoBehaviour
 {
+    AudioSource aud;    
     // Start is called before the first frame update
     void Start()
     {
-
+        aud = this.GetComponent<AudioSource>();
     }
 
     public float speed;
@@ -60,6 +61,9 @@ public class PlayerBehaviour : MonoBehaviour
             shotLR = !shotLR;
 
             bt=0;
+
+            aud.PlayOneShot(aud.clip);
+            
         }
 
         Debug.Log("Pucanj!");
