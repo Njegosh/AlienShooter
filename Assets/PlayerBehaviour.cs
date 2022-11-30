@@ -65,7 +65,5 @@ public class PlayerBehaviour : MonoBehaviour
             aud.PlayOneShot(aud.clip);
             
         }
-
-        Debug.Log("Pucanj!");
     }
 }
