@@ -21,6 +21,9 @@ public class Bugalu : Enemy {
     public float Yspeed = 3f;
     public float amp = 10f;
 
+    public GameObject hurt;
+    public GameObject died;
+
     [SerializeField]
     float t = 0;
 
@@ -29,7 +32,7 @@ public class Bugalu : Enemy {
     public override void Move() {
 
         if (!inY) {
-            this.transform.position = new Vector3(x + Mathf.Sin(t * Xspeed + moveOffset) * amp, Mathf.Lerp(startY, y, Mathf.SmoothStep(0, 1, t * Yspeed)));
+            this.transform.position = new Vector3(x + Mathf.Sin(t * Xspeed + moveOffset) * amp, Mathf.Lerp(startY, y, Mathf.SmoothStep(0, 1, t * Yspeed)) + Mathf.Sin(t * Xspeed * 3 + moveOffset) * amp / 3);
             if (t * Yspeed >= 1) 
                 inY = true;
         } 
@@ -44,7 +47,7 @@ public class Bugalu : Enemy {
         }*/
 
         else
-            this.transform.position = new Vector3(x + Mathf.Sin(t * Xspeed + moveOffset) * amp, y);
+            this.transform.position = new Vector3(x + Mathf.Sin(t * Xspeed + moveOffset) * amp, y + Mathf.Sin(t * Xspeed * 3 + moveOffset) * amp / 3  );
 
         t += Time.deltaTime;
 
@@ -63,10 +66,20 @@ public class Bugalu : Enemy {
 
     }
     public override void Dmg(int dmg) {
+        Instantiate(hurt, this.gameObject.transform.position, hurt.transform.rotation);
+        //LeanTween.(0.1f);
         hp-=dmg;
         if(hp<=0){
+            LeanTween.cancel(this.gameObject);
             death.Invoke();
+            death.RemoveAllListeners();
+            Instantiate(died, this.gameObject.transform.position, died.transform.rotation);
             GameObject.Destroy(this.gameObject);
         }
+
+        LTSeq seq = LeanTween.sequence();
+        seq.append(()=> {LeanTween.color(this.gameObject, Color.red ,0.01f);});
+        seq.append(0.1f); 
+        seq.append(()=> {LeanTween.color(this.gameObject,Color.white,0.02f);});
     }
 }

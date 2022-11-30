@@ -53,12 +53,12 @@ public class PlayerBehaviour : MonoBehaviour
 
         else if (Input.GetKey(KeyCode.Space))
         {
-            if(shotLR)
+            //if(shotLR)
                 Instantiate(bullet, topL.position, Quaternion.identity);
-            else
+            //else
                 Instantiate(bullet, topR.position, Quaternion.identity);
             
-            shotLR = !shotLR;
+            //shotLR = !shotLR;
 
             bt=0;
 
