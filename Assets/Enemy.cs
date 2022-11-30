@@ -9,6 +9,8 @@ public abstract class Enemy : MonoBehaviour
     public int maxHp;
     public int hp;
 
+    public int points;
+
     [SerializeField]
     public float moveOffset = 0;
 
