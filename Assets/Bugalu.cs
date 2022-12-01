@@ -70,16 +70,17 @@ public class Bugalu : Enemy {
         //LeanTween.(0.1f);
         hp-=dmg;
         if(hp<=0){
-            LeanTween.cancel(this.gameObject);
+            //LeanTween.cancel(this.gameObject);
             death.Invoke();
             death.RemoveAllListeners();
             Instantiate(died, this.gameObject.transform.position, died.transform.rotation);
             GameObject.Destroy(this.gameObject);
         }
-
+/*
         LTSeq seq = LeanTween.sequence();
         seq.append(()=> {LeanTween.color(this.gameObject, Color.red ,0.01f);});
         seq.append(0.1f); 
         seq.append(()=> {LeanTween.color(this.gameObject,Color.white,0.02f);});
+*/
     }
 }
