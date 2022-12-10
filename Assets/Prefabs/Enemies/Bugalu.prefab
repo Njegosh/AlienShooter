@@ -106,6 +106,8 @@ MonoBehaviour:
   hp: 100
   points: 1
   moveOffset: 0
+  fireCooldown: 1
+  bullet: {fileID: 1063469618939568868, guid: bcf3414cbea8a2df3b37dc6767baa64e, type: 3}
   Xspeed: 1
   Yspeed: 0.5
   amp: 1

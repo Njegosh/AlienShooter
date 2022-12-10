@@ -1,10 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class Spawner : MonoBehaviour
 {
-
+    public TextMeshProUGUI scoreLabel;
     public List<Enemy> enemies;
 
     [SerializeField]
@@ -50,6 +51,7 @@ public class Spawner : MonoBehaviour
     }
 
     void writeScore(){
+        scoreLabel.text = score.ToString();
         Debug.Log("Score: " + score);
     }
 
