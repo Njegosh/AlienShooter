@@ -53,7 +53,7 @@ public class Bugalu : Enemy {
             this.transform.position = new Vector3(x + Mathf.Sin(t * Xspeed + moveOffset) * amp, y + Mathf.Sin(t * Xspeed * 3 + moveOffset) * amp / 3  );
             if (!canPlay) {
                 canPlay = true;
-                InvokeRepeating("FireBullet", fireCooldown + moveOffset*2, fireCooldown + moveOffset*2);
+                InvokeRepeating("FireBullet", (fireCooldown + moveOffset*2)/2, fireCooldown);
                 //StartCoroutine(Fire());
             }
         }
@@ -72,11 +72,6 @@ public class Bugalu : Enemy {
     }
     public override void SpecialAttack() {
 
-    }    
-    IEnumerator Fire() {
-
-        Instantiate(bullet, this.transform.position, bullet.transform.rotation);
-        yield return new WaitForSeconds(fireCooldown + moveOffset*2);
     }
     void FireBullet() {
         Instantiate(bullet, this.transform.position, bullet.transform.rotation);

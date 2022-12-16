@@ -8,26 +8,30 @@ public class Dusman : Enemy {
 
     float startX;
 
-    float fireCooldown;
+    [SerializeField]float fireCooldown;
+    [SerializeField]float fireCooldown2;
     bool canPlay = false;
-    GameObject bullet;
+    public GameObject bullet;
 
     void Start() {
         x = this.transform.position.x;// + Mathf.Sin(moveOffset);
         y = this.transform.position.y;
-        startY = y + 20;
-        startX = x + 20 * Mathf.Sign(moveOffset);
+        startY = y + 10;
+
+        startX = x + 5 * Mathf.Sign(x);
         this.transform.position = new Vector3(startX, startY);
     }
     bool inY = false;
     bool inX = false;
 
-    public float XinSpeed = 3f;
-    public float YinSpeed = 3f;
+    public float InSpeed = 3f;
+    public float startMovingSpeed = 2f;
 
     public float Xspeed = 3f;
     public float Yspeed = 3f;
     public float amp = 10f;
+
+    float ampUse = 0;
 
     public GameObject hurt;
     public GameObject died;
@@ -39,20 +43,28 @@ public class Dusman : Enemy {
     public override void Move() {
 
         if (!inY) {
-            this.transform.position = new Vector3(Mathf.Lerp(startX, x, Mathf.SmoothStep(0, 1, t * XinSpeed)), Mathf.Lerp(YinSpeed, y, Mathf.SmoothStep(0, 1, t * Yspeed)));
-            if (t * YinSpeed >= 1 && t * XinSpeed >= 1)
+            this.transform.position = new Vector3(
+                Mathf.Lerp(startX, x, Mathf.SmoothStep(0, 1, t * InSpeed)) + Mathf.Sin(t * Xspeed + moveOffset) * ampUse,
+                Mathf.Lerp(startY, y, Mathf.SmoothStep(0, 1, t * InSpeed)) + Mathf.Sin(t * Xspeed * 3 + moveOffset) * ampUse / 3);
+            if (t * InSpeed >= 1)
                 inY = true;
         } else {
             if (!canPlay) {
                 canPlay = true;
-                StartCoroutine(Fire());
+                InvokeRepeating("FireBullet", fireCooldown, fireCooldown + moveOffset*2);
+                InvokeRepeating("FireBullet", fireCooldown + fireCooldown2, fireCooldown + moveOffset*2);
+                t=0;
             }
+            if(ampUse!=amp)
+            ampUse = Mathf.SmoothStep(0, amp, t * startMovingSpeed);
 
-            this.transform.position = new Vector3(x + Mathf.Sin(t * Xspeed + moveOffset) * amp, y + Mathf.Sin(t * Xspeed * 3 + moveOffset) * amp / 3);
+            this.transform.position = new Vector3(x + Mathf.Sin(t * Xspeed + moveOffset) * ampUse,
+                                                  y + Mathf.Sin(t * Xspeed * 3 + moveOffset) * ampUse / 3);
             Debug.Log("in position");
         }
 
         t += Time.deltaTime;
+
     }
 
     public override void Attack() {
@@ -62,12 +74,10 @@ public class Dusman : Enemy {
 
     }
 
-    IEnumerator Fire() {
-
+    void FireBullet() {
         Instantiate(bullet, this.transform.position, bullet.transform.rotation);
-        yield return new WaitForSeconds(fireCooldown);
+        
     }
-
     public override void Dmg(int dmg) {
         if (canPlay) {
             Instantiate(hurt, this.gameObject.transform.position, hurt.transform.rotation);
