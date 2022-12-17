@@ -22,4 +22,6 @@ public abstract class Enemy : MonoBehaviour
     public abstract void Attack();
     public abstract void SpecialAttack();
     public abstract void Dmg(int dmg);
+
+    public abstract void DieQuick();
 }

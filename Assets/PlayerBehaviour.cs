@@ -6,10 +6,11 @@ public class PlayerBehaviour : MonoBehaviour {
     AudioSource aud;
     // Start is called before the first frame update
     void Start() {
+        gameMenager = GameObject.FindGameObjectWithTag("GameController").GetComponent<GameMenager>();
         aud = this.GetComponent<AudioSource>();
     }
 
-
+    public GameMenager gameMenager;
     int hp = 3;
 
     public float speed;
@@ -27,7 +28,6 @@ public class PlayerBehaviour : MonoBehaviour {
     float bt = 0;
 
     bool shotLR;
-    // Update is called once per frame
     void Update() {
         Move();
         Shoot();
@@ -68,6 +68,7 @@ public class PlayerBehaviour : MonoBehaviour {
         Debug.Log("OUCH");
 
         if(hp<=0){
+            gameMenager.GameOver();
             GameObject.Destroy(this.gameObject);
         }
     }
