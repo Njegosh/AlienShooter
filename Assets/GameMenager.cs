@@ -16,6 +16,7 @@ public class GameMenager : MonoBehaviour
     // Start is called before the first frame update
     bool game = false;
 
+    //ako maja ovo cita, cao majo!!!! <3
 
     public void StartGame(){
         startScreen.SetActive(false);
