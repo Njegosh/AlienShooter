@@ -65,8 +65,13 @@ public class Spawner : MonoBehaviour {
 
     public void EndGame() {
         canSpawn=false;
-        InvokeRepeating("EveryoneDies", 3, 1);
+        Invoke("EveryoneDies", 3);
     }
+    public void QuickEndGame() {
+        canSpawn=false;
+        Invoke("EveryoneDies", 0);
+    }
+
 
     void EveryoneDies() {
         try {
