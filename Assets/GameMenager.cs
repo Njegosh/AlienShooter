@@ -21,6 +21,7 @@ public class GameMenager : MonoBehaviour
 
     void Update()
     {
+        Cursor.visible = false;
         if (Input.GetKey(KeyCode.Escape))
             PauseGame();
     }
@@ -39,6 +40,7 @@ public class GameMenager : MonoBehaviour
     public void GameOver()
     {
         gameOver.SetActive(true);
+        gameOver.GetComponent<FocusThis>().Focus();
         spawner.EndGame();
         game = false;
     }
@@ -48,6 +50,7 @@ public class GameMenager : MonoBehaviour
         if (game)
         {
             pauseScreen.SetActive(true);
+            pauseScreen.GetComponent<FocusThis>().Focus();
             Time.timeScale = 0;
         }
     }
@@ -61,6 +64,7 @@ public class GameMenager : MonoBehaviour
     public void MainMenu()
     {
         startScreen.SetActive(true);
+        startScreen.GetComponent<FocusThis>().Focus();
 
         pauseScreen.SetActive(false);
         Time.timeScale = 1;

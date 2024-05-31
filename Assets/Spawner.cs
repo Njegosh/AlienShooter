@@ -23,8 +23,6 @@ public class Spawner : MonoBehaviour {
 
     void Spawn() {
         if (canSpawn) {
-            Debug.Log("Wave: " + waveNumber);
-
             Wave w = waves[waveNumber];
             currentEnemies = w.enemies.Count;
 
@@ -48,7 +46,6 @@ public class Spawner : MonoBehaviour {
 
     void writeScore() {
         scoreLabel.text = score.ToString();
-        Debug.Log("Score: " + score);
     }
 
     // Update is called once per frame
